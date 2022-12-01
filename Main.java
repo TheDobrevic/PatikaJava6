@@ -1,17 +1,24 @@
 import java.util.Scanner;
-public class Taximeter {
-    public static void main (String[] args){
-        double kilometer,perKm=2.20, taxiMeter;
-        int startPrice=10;
 
-        Scanner input=new Scanner(System.in);
-        System.out.print("Enter the distance (km):");
+public class Main {
+    public static void main(String[] args) {
+        double armut=2.14,elma=3.67,domates=1.11,muz=0.95,patlican=5,armutkg,elmakg,domateskg,muzkg,patlicankg,toplam;
+        Scanner mec = new Scanner(System.in);
 
-        kilometer = input.nextDouble();
-        taxiMeter=kilometer*perKm ;
-        taxiMeter += startPrice;
+        System.out.print("Armut Kaç Kilo: ");
+        armutkg=mec.nextDouble();
+        System.out.print("Elma Kaç Kilo: ");
+        elmakg=mec.nextDouble();
+        System.out.print("Domates  Kaç Kilo: ");
+        domateskg=mec.nextDouble();
+        System.out.print("Muz Kaç Kilo: ");
+        muzkg= mec.nextDouble();
+        System.out.print("Patlıcan Kaç Kilo: ");
+        patlicankg= mec.nextDouble();
 
-        taxiMeter= (taxiMeter<20) ? 20 : taxiMeter ;
-        System.out.print("Taksimeter Fare:" + taxiMeter+ " TL");
+        toplam=armut*armutkg+elma*elmakg+domates*domateskg+muz*muzkg+patlican*patlicankg;
+        System.out.println("Toplam Tutar: " +toplam);
+
+
     }
 }
